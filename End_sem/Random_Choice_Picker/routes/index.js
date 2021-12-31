@@ -10,12 +10,20 @@ var router = express.Router();
 router.get('/1', function(req, res, next) {
   //es.send('respond with a resource');
   randoms.find({}, function(err, rows){
-    console.log(rows[1].text)
-    const picUrl= rows[1].text;
+    //console.log(rows[1].text)
+    const picUrl= rows[0].text;
     res.render('index',{picUrl})
 });
 });
 
+router.get('/2', function(req, res, next) {
+  //es.send('respond with a resource');
+  randoms.find({}, function(err, rows){
+    //console.log(rows[0].text)
+    const picUrl= rows[1].text;
+    res.render('index',{picUrl})
+});
+});
 // express.set('view engine', 'ejs')
 
 // express.post('/start', (req, res) => {

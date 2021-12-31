@@ -18,17 +18,21 @@ router.get('/1', function(req, res, next) {
         const head1 = rows[2].h;
         const head2 = rows[3].h;
         const head3 = rows[4].h;
+        const head4 = rows[5].h;
+        const head5 = rows[6].h;
 
 
 
         const para1 = rows[2].p;
         const para2 = rows[3].p;
         const para3 = rows[4].p;
+        const para4 = rows[5].p;
+        const para5 = rows[6].p;
 
 
 
 
-        res.render('index', { picUrl, picUrl1, head1, head2, head3, para1, para2, para3 })
+        res.render('index', { picUrl, picUrl1, head1, head2, head3, head4, head5, para1, para2, para3, para4, para5 })
     });
 });
 
